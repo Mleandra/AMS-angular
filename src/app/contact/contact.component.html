@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Nous contactez
+        </div>
+        <img class="card-img-top" src="https://fictionhorizon.com/wp-content/uploads/2022/02/1639156710_Thats-how-impressive-Nami-would-be-from-One-Piece-with-1024x563.jpg" alt="Card image cap">
+        <div class="card-body">
+
+          <h5 class="card-title">Nami</h5>
+          <div  class="card-text">Tel : 44 44 44 44</div>
+          <div class="card-text">Email : nami@gmail.com</div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form #contactForm="ngForm" (ngSubmit)="contactadd(contactForm)">
+        <div class="form-group">
+          <label for="providername">name</label>
+          <input ngModel name="name" type="text" class="form-control" id="providername" aria-describedby="emailHelp" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="contactemail">email</label>
+          <input  ngModel name="email" type="email" class="form-control" id="provideremail" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="description">description</label>
+          <input  ngModel name="description" type="textarea" class="form-control" id="provideraddress" aria-describedby="emailHelp" placeholder="description">
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+  </div>
+  </div>
+
+</div>

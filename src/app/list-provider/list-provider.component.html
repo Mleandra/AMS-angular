@@ -1,0 +1,37 @@
+<div class="container">
+<h3 align="center">list Provider</h3>
+<div>Ajouter un  provider <a class="btn btn-primary" [routerLink]="['addProvider']" ><i class="fa fa-plus"></i></a></div>
+<table border="1" align="center" class="table">
+  <thead>
+  <tr>
+    <th scope="col" >Id</th>
+    <th scope="col">Name</th>
+    <th  scope="col">address</th>
+    <th scope="col">email</th>
+    <th scope="col">Detail</th>
+    <th scope="col">Update</th>
+    <th scope="col">Delete</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of provider">
+    <th scope="row" >{{p.id}}</th>
+    <td>{{p.name}}</td>
+    <td>{{p.address}}</td>
+    <td>{{p.email}}</td>
+    <td class="">
+      <button class="btn btn-primary" (click)="detailsProvider(p.id)"><i class="fa fa-info"></i></button>
+    </td>
+    <td class="">
+      <button class="btn btn-warning"  (click)="updateProvider(p.id)"><i class="fa fa-edit"></i></button>
+    </td>
+    <td class="">
+      <button class="btn btn-danger" (click)='deleteProvider(p.id)'><i class="fa fa-trash"></i></button>
+    </td>
+
+
+  </tr>
+</tbody>
+</table>
+</div>

@@ -1,0 +1,28 @@
+<form #addArticleForm="ngForm" (ngSubmit)="createArticle(addArticleForm)">
+  <div class="form-group">
+    <label for="label">Label</label>
+    <input ngModel name="label" type="text" class="form-control" id="label" aria-describedby="emailHelp" placeholder="Enter name of article">
+  </div>
+
+  <div class="form-group">
+    <label for="picture">Picture</label>
+    <input  ngModel name="picture" type="text" class="form-control" id="picture" aria-describedby="emailHelp" placeholder="Enter picture link">
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input  ngModel name="price" type="number" class="form-control" id="price" aria-describedby="emailHelp" placeholder="Enter price">
+  </div>
+  <div class="form-group">
+
+    <label for="provider_id">ID provider</label>
+    <select class="custom-select" ngModel name="provider_id">
+      <option *ngFor="let p of provider" [value]="p.id">
+        {{p.name}}
+      </option>
+    </select>
+
+  </div>
+
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form>

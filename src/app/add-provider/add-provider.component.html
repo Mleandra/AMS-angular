@@ -1,0 +1,18 @@
+<form #addProviderForm="ngForm" (ngSubmit)="createProvider(addProviderForm)">
+  <div class="form-group">
+    <label for="providername">Provider name</label>
+    <input ngModel name="name" type="text" class="form-control" id="providername" aria-describedby="emailHelp" placeholder="Enter name">
+  </div>
+
+  <div class="form-group">
+    <label for="provideraddress">Provider address</label>
+    <input  ngModel name="address" type="text" class="form-control" id="provideraddress" aria-describedby="emailHelp" placeholder="Enter address">
+  </div>
+
+  <div class="form-group">
+    <label for="provideremail">Provider email</label>
+    <input  ngModel name="email" type="email" class="form-control" id="provideremail" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
